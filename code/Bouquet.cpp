@@ -16,6 +16,7 @@ Bouquet::Bouquet(const std::vector<Flower> &flowers, float price,
 {
 }
 
+/// @brief Bonjour
 void Bouquet::age()
 {
   for (Flower &flower : flowers_)
