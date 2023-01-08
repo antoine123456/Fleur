@@ -28,6 +28,8 @@ public:
     int get_id() const;
 
     void __repr__();
+    
+    ~Bouquet(){};
 
 private:
     std::vector<Flower> flowers_;
