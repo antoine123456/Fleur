@@ -61,6 +61,7 @@ int Bouquet::get_id() const
 
 
 /// @brief Determine la date d'expiration du bouquet à partir des durees de vie des fleurs
+/// @tparam {private}
 void Bouquet::calc_exp_date()
 {
   int expiTmp = INT_MAX;
@@ -75,6 +76,8 @@ void Bouquet::calc_exp_date()
   expiration_date_ = expiTmp;
 }
 
+/// @brief Renvoit la date d'expiration du Bouquet
+/// @return expiration_date {int}
 int Bouquet::expiration_date()
 {
   if (expiration_date_ < 0)
@@ -84,10 +87,13 @@ int Bouquet::expiration_date()
   return expiration_date_;
 }
 
+/// @brief Change le prix du bouquet
+/// @param price {int} Prix du bouquet
 void Bouquet::set_price(int price){
   price_ = price;
 }
 
+/// @brief Présente le bouquet
 void Bouquet::__repr__()
 {
   cout << "Nombre de fleurs(s) du bouquet : " << flowers_.size() << endl;
