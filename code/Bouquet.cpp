@@ -6,6 +6,12 @@ using namespace std;
 
 #include "bouquet.h"
 
+/// @brief Implémentation de la classe bouquet
+/// @param flowers {vector<Flower>} fleurs contenues dans le Bouquet
+/// @param price {float} prix du bouquet
+/// @param time_to_make {int} temps de fabrication
+/// @param id {int} identificateur
+/// @param expiration_date {int} date d'expiration (-1 pour la fleur la plus courte echeance)
 Bouquet::Bouquet(const std::vector<Flower> &flowers, float price,
                  int time_to_make, int id,int expiration_date)
     : flowers_(flowers),
@@ -16,7 +22,7 @@ Bouquet::Bouquet(const std::vector<Flower> &flowers, float price,
 {
 }
 
-/// @brief Implémentation de la classe bouquet
+/// @brief Viellissement des fleurs du Bouquet selon la methode 'age' de la classe 'fleur'
 void Bouquet::age()
 {
   for (Flower &flower : flowers_)
@@ -25,11 +31,15 @@ void Bouquet::age()
   }
 }
 
+/// @brief Fleurs contenues dans le bouquet
+/// @return flowers {vector<Flower>}
 const std::vector<Flower> &Bouquet::flowers() const
 {
   return flowers_;
 }
 
+/// @brief Prix du Bouquet
+/// @return price {float}
 float Bouquet::price() const
 {
   return price_;
