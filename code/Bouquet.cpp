@@ -80,10 +80,7 @@ void Bouquet::calc_exp_date()
 /// @return expiration_date {int}
 int Bouquet::expiration_date()
 {
-  if (expiration_date_ < 0)
-    {
-    cout << "\n calc viellissement \n" << endl;
-    calc_exp_date();}
+  if (expiration_date_ < 0) calc_exp_date();
   return expiration_date_;
 }
 
