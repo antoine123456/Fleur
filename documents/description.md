@@ -12,41 +12,5 @@ Celui-ci aura un prix en fonction des fleurs qui sont associées et du temps de 
  
  Lorsqu'un bouquet est vendu il n'est plus disponible dans le magasin.
 
- "tasks": [
-        {
-            "taskName": "script",
-            "isBuildCommand": true,
-            "type": "shell",
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            },
-            "command": "\"g++ main.cpp && ./a.out",
-            "options": {
-                "shell": {
-                    "executable": "C:\\Users\\antoine\\AppData\\Local\\Microsoft\\WindowsApps\\KaliLinux.54290C8133FEE_ey8k8hqnwqnmg\\kali.exe",
-                    "args": [
-                        "-c"
-                    ]
-                }
-            }
-        }
-    ]
-    {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "command": "python",
-    "isShellCommand": true,
-    "showOutput": "never",
-    "suppressTaskName": true,
-    "tasks": [
-        {
-            "taskName": "script",
-            "args": [
-                "./code/main.py"
-            ],
-            "isBuildCommand": true,
-            "showOutput": "never"
-        }
-    ]
-}
+================
+on pourait ajouter une methode pour retirer une feur du bouquet
