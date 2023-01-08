@@ -45,6 +45,8 @@ float Bouquet::price() const
   return price_;
 }
 
+/// @brief Temps de confection
+/// @return time_to_make {int}
 int Bouquet::time_to_make() const
 {
   return time_to_make_;
