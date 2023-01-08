@@ -13,4 +13,4 @@ Celui-ci aura un prix en fonction des fleurs qui sont associées et du temps de 
  Lorsqu'un bouquet est vendu il n'est plus disponible dans le magasin.
 
 ================
-on pourait ajouter une methode pour retirer une feur du bouquet
+on pourait ajouter une methode pour retirer/ ajouter une feur du bouquet
