@@ -3,18 +3,30 @@
 
 using namespace std;
 
+/// @brief Constructeur de la classe fleur
+/// @param name {string} Nom de la fleur
+/// @param age {int} Age de la fleur
+/// @param lifetime {int} Duree de vie de la fleur
+/// @param id {int} Identifiant de la fleur
+/// @
+ 
 Flower::Flower(const std::string &name, int age, int lifetime, int id) : name_(name), age_(age), lifetime_(lifetime), id_(id) {}
 
+/// @brief Incrémente l'age de la fleur
 void Flower::age()
 {
   age_++;
 }
 
+/// @brief Retourne le nom de la fleur
+/// @return name {string}
 const std::string &Flower::name() const
 {
   return name_;
 }
 
+/// @brief Retourne l'age de la fleur
+/// @return age {int}
 int Flower::age() const
 {
   return age_;
