@@ -31,32 +31,36 @@ void Bouquet::age()
   }
 }
 
-/// @brief Fleurs contenues dans le bouquet
+/// @brief Renvoit les fleurs contenues dans le bouquet
 /// @return flowers {vector<Flower>}
 const std::vector<Flower> &Bouquet::flowers() const
 {
   return flowers_;
 }
 
-/// @brief Prix du Bouquet
+/// @brief Renvoit le Prix du Bouquet
 /// @return price {float}
 float Bouquet::price() const
 {
   return price_;
 }
 
-/// @brief Temps de confection
+/// @brief Renvoit le temps de confection du bouquet
 /// @return time_to_make {int}
 int Bouquet::time_to_make() const
 {
   return time_to_make_;
 }
 
+/// @brief Renvoit l'identificateur du bouquet
+/// @return id {int}
 int Bouquet::get_id() const
 {
   return id_;
 }
 
+
+/// @brief Determine la date d'expiration du bouquet à partir des durees de vie des fleurs
 void Bouquet::calc_exp_date()
 {
   int expiTmp = INT_MAX;
