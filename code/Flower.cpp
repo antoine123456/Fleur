@@ -32,11 +32,14 @@ int Flower::age() const
   return age_;
 }
 
+/// @brief Retourne la durée de vie de la fleur
+/// @return lifetime
 int Flower::lifetime() const
 {
   return lifetime_;
 }
 
+/// @brief Retourne l'Identifiant
 int Flower::get_id() const
 {
   return id_;
