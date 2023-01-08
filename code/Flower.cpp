@@ -40,11 +40,13 @@ int Flower::lifetime() const
 }
 
 /// @brief Retourne l'Identifiant
+/// @return id
 int Flower::get_id() const
 {
   return id_;
 }
 
+/// @brief Présente la fleur
 void Flower::__repr__()
 {
   cout << " - Nom de la fleur : " << name_ << endl;
