@@ -6,7 +6,7 @@ using namespace std;
 
 #include "bouquet.h"
 
-/// @brief Implémentation de la classe bouquet
+/// @brief Constructeur de la classe bouquet
 /// @param flowers {vector<Flower>} fleurs contenues dans le Bouquet
 /// @param price {float} prix du bouquet
 /// @param time_to_make {int} temps de fabrication
