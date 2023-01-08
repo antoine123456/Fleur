@@ -7,6 +7,7 @@
 
 using namespace std;
 
+/// @brief Constructeur de la classe magasin de fleurs
 FlowerShop::FlowerShop() : age_(4) {}
 
 void FlowerShop::add_bouquet(const Bouquet &bouquet)
