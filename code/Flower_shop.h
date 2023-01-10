@@ -7,6 +7,7 @@
 
 #include "Bouquet.h"
 
+/// @brief Implémente la classe magasin de fleur
 class FlowerShop {
  public:
   FlowerShop();

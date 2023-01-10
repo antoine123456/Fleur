@@ -8,6 +8,7 @@
 
 #include "flower.h"
 
+/// @brief Implémente la classe Bouquet
 class Bouquet
 {
 public:
