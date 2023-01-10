@@ -8,11 +8,17 @@
 
 #include "flower.h"
 
-/// @brief Implémente la classe Bouquet
+/**
+ * @brief Implémente la classe Bouquet
+ * \startuml
+ * Bouquet->Flower : age()
+ * Bouquet<--Flower : get_id()
+ * \enduml
+ */
 class Bouquet
 {
 public:
-    Bouquet(const std::vector<Flower> &flowers, float price, int time_to_make, int id,int expiration_date);
+    Bouquet(const std::vector<Flower> &flowers, float price, int time_to_make, int id, int expiration_date);
 
     void age();
 

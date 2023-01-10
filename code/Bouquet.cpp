@@ -38,7 +38,7 @@ const std::vector<Flower> &Bouquet::flowers() const
   return flowers_;
 }
 
-/// @brief Renvoit le Prix du Bouquet
+/// @brief Renvoit le prix du Bouquet
 /// @return price {float}
 float Bouquet::price() const
 {

@@ -1,9 +1,0 @@
-@startuml
-Flower : id
-Flower : get_id()
-class Bouquet{
-float price
-Vector<Flower> flowers
-flowers()
-}
-@enduml
