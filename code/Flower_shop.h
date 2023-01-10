@@ -25,6 +25,8 @@ class FlowerShop {
 
    void __repr__();
 
+   ~Flower_shop(){}
+
  private:
    std::vector<Bouquet> bouquets_;
    std::vector<Bouquet> sold_bouquets_;

@@ -21,7 +21,9 @@ class Flower {
 
   int get_id() const;
 
-  private:
+  ~Flower(){};
+
+private:
   std::string name_;
   int age_;
   int lifetime_;

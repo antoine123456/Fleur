@@ -28,7 +28,7 @@ public:
     int get_id() const;
 
     void __repr__();
-    
+
     ~Bouquet(){};
 
 private:
