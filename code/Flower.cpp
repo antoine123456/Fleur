@@ -18,21 +18,21 @@ void Flower::age()
 
 /// @brief Retourne le nom de la fleur
 /// @return name {string}
-const std::string &Flower::name() const
+const std::string &Flower::get_name() const
 {
   return name_;
 }
 
 /// @brief Retourne l'age de la fleur
 /// @return age {int}
-int Flower::age() const
+int Flower::get_age() const
 {
   return age_;
 }
 
 /// @brief Retourne la durée de vie de la fleur
 /// @return lifetime
-int Flower::lifetime() const
+int Flower::get_lifetime() const
 {
   return lifetime_;
 }

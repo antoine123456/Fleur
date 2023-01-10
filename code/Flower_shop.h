@@ -8,30 +8,36 @@
 #include "Bouquet.h"
 
 /// @brief Implémente la classe magasin de fleur
-class FlowerShop {
- public:
+/// @param bouquets {vector<Flower>} bouquets disponibles dans le magasin
+/// @param soldBouquets {vector<Flower>} bouquets vendues par magasin
+class FlowerShop
+{
+public:
   FlowerShop();
 
-   void add_bouquet(const Bouquet &bouquet);
+  void add_bouquet(const Bouquet &bouquet);
 
-   void sell_bouquet(const Bouquet &bouquet);
+  void sell_bouquet(const Bouquet &bouquet);
 
-   void mark_as_expired(Bouquet &bouquet);
+  void mark_as_expired(Bouquet &bouquet);
 
-   const std::vector<Bouquet> &bouquets() const;
+  const std::vector<Bouquet> &get_bouquets() const;
 
-   const std::vector<Bouquet> &sold_bouquets() const;
+  const std::vector<Bouquet> &get_soldBouquets() const;
 
-   void cycle();
+  void perf_cycle();
 
-   void __repr__();
+  void __repr__();
 
-   ~Flower_shop(){}
+  ~FlowerShop(){};
 
- private:
-   std::vector<Bouquet> bouquets_;
-   std::vector<Bouquet> sold_bouquets_;
-   int age_;
+private:
+  /// @brief  bouquets_ {vector<Flower>} bouquets disponibles dans le magasin
+  std::vector<Bouquet> bouquets_;
+  /// @brief soldBouquets_ {vector<Flower>} bouquets vendues par magasin
+  std::vector<Bouquet> soldBouquets_;
+  /// @brief age_ {int} Temps de vie du magasin
+  int age_;
 };
 
-#endif 
+#endif

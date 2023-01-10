@@ -21,19 +21,19 @@ int main()
   flower_shop.add_bouquet(bouquet);
 
   // Une age s'écoule
-  flower_shop.cycle();
+  flower_shop.perf_cycle();
 
   flower_shop.__repr__();
   cout << "===========" << endl;
 
   // Une age s'écoule
-  flower_shop.cycle();
+  flower_shop.perf_cycle();
 
   flower_shop.__repr__();
   cout << "===========" << endl;
 
   // Vente du bouquet
-  flower_shop.sell_bouquet(flower_shop.bouquets()[0]);
+  flower_shop.sell_bouquet(flower_shop.get_bouquets()[0]);
   flower_shop.__repr__();
   cout << "===========" << endl;
 

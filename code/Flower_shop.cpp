@@ -8,17 +8,18 @@
 using namespace std;
 
 /// @brief Constructeur de la classe magasin de fleurs
+/// @param age {int} Temps de vie du magasin
 /// @deprecated Initialise l'age à 4 pour la démo
 FlowerShop::FlowerShop() : age_(4) {}
 
-/// @brief Ajoute un bouquet au magasin de fleurs, au vecteur des bouquets en vente
+/// @brief Ajoute un bouquet au magasin de fleurs, (ajoute un bouquet au vecteur des bouquets en vente)
 /// @param bouquet {Bouquet} Bouquet à ajouter au magasin de fleurs
 void FlowerShop::add_bouquet(const Bouquet &bouquet)
 {
     bouquets_.push_back(bouquet);
 }
 
-/// @brief Vente d'un bouquet par le magasin de fleurs, ajoute le bouquet au vecteur des bouquets vendus et supprime des bouquets en vente
+/// @brief Vente d'un bouquet par le magasin de fleurs (ajoute le bouquet au vecteur des bouquets vendus et supprime des bouquets en vente)
 /// @param bouquet {Bouquet} Bouquet à vendre
 void FlowerShop::sell_bouquet(const Bouquet &bouquet)
 {
@@ -26,39 +27,39 @@ void FlowerShop::sell_bouquet(const Bouquet &bouquet)
     bouquets_.erase(remove_if(bouquets_.begin(), bouquets_.end(), [&id](const Bouquet &b)
                               { return b.get_id() == id; }),
                     bouquets_.end());
-    sold_bouquets_.push_back(bouquet);
+    soldBouquets_.push_back(bouquet);
 }
 
 /// @brief Passage de la date d'expiration du bouquet
 /// @param bouquet {Bouquet} Bouquet arrivé â expiration
 void FlowerShop::mark_as_expired(Bouquet &bouquet)
 {
-    bouquet.set_price(bouquet.price() * 0.5); // Mettre en solde à 50%
+    bouquet.set_price(bouquet.get_price() * 0.5); // Mettre en solde à 50%
 }
 
 /// @brief Retourne les bouquets en vente au magasin de fleurs
 /// @return bouquets {vector<Bouquet>}
-const std::vector<Bouquet> &FlowerShop::bouquets() const
+const std::vector<Bouquet> &FlowerShop::get_bouquets() const
 {
     return bouquets_;
 }
 
 /// @brief Retourne les bouquet vendus par le magasin de fleurs
 /// @return sold_bouquets {vector<Bouquet>}
-const std::vector<Bouquet> &FlowerShop::sold_bouquets() const
+const std::vector<Bouquet> &FlowerShop::get_soldBouquets() const
 {
-    return sold_bouquets_;
+    return soldBouquets_;
 }
 
 /// @brief Fonctionnement du magasin de fleur (passage du temps et soldage en consequence)
-void FlowerShop::cycle()
+void FlowerShop::perf_cycle()
 {
     for (Bouquet &bouquet : bouquets_)
     {
         bouquet.age();
         age_++;
         // Vérification si le bouquet doit être mis en solde
-        int tmpAge = bouquet.expiration_date();
+        int tmpAge = bouquet.get_expirationDate();
         if (tmpAge < age_)
         {
             mark_as_expired(bouquet);
@@ -78,11 +79,11 @@ void FlowerShop::__repr__()
             bouquet.__repr__();
         }
     }
-    int tmpSellLen = sold_bouquets_.size();
+    int tmpSellLen = soldBouquets_.size();
     if (tmpSellLen > 0)
     {
         cout << "Nombre de bouquets vendus : " << tmpSellLen << endl;
-        for (Bouquet &bouquet : sold_bouquets_)
+        for (Bouquet &bouquet : soldBouquets_)
         {
             bouquet.__repr__();
         }
