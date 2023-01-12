@@ -3,7 +3,7 @@
 
 #include "Flower.h"
 #include "Bouquet.h"
-#include "Flower_shop.h"
+#include "Flower_Shop.h"
 
 using namespace std;
 
@@ -15,26 +15,26 @@ int main()
   Bouquet bouquet({rose}, 10, 30, 1, -1);
 
   // Création d'un magasin de fleurs
-  FlowerShop flower_shop;
+  Flower_Shop Flower_Shop;
 
   // Ajout du bouquet de roses au magasin
-  flower_shop.add_bouquet(bouquet);
+  Flower_Shop.add_bouquet(bouquet);
 
   // Une age s'écoule
-  flower_shop.perf_cycle();
+  Flower_Shop.perf_cycle();
 
-  flower_shop.__repr__();
+  Flower_Shop.__repr__();
   cout << "===========" << endl;
 
   // Une age s'écoule
-  flower_shop.perf_cycle();
+  Flower_Shop.perf_cycle();
 
-  flower_shop.__repr__();
+  Flower_Shop.__repr__();
   cout << "===========" << endl;
 
   // Vente du bouquet
-  flower_shop.sell_bouquet(flower_shop.get_bouquets()[0]);
-  flower_shop.__repr__();
+  Flower_Shop.sell_bouquet(Flower_Shop.get_bouquets()[0]);
+  Flower_Shop.__repr__();
   cout << "===========" << endl;
 
   return 0;

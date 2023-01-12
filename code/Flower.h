@@ -3,7 +3,7 @@
 
 #include <string>
 
-/// @brief Implémente la classe fleur
+/// @brief Implémente la classe Flower
 /// @param name {string} nom de la fleur
 /// @param age {int} age de la fleur
 /// @param lifetime {int} durée de vie de la fleur

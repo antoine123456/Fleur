@@ -1,19 +1,19 @@
-// flowershop.h
+// Flower_Shop.h
 
-#ifndef FLOWERSHOP_H_
-#define FLOWERSHOP_H_
+#ifndef Flower_Shop_H_
+#define Flower_Shop_H_
 
 #include <vector>
 
 #include "Bouquet.h"
 
-/// @brief Implémente la classe magasin de fleur
+/// @brief Implémente la classe Flower_Shop
 /// @param bouquets {vector<Flower>} bouquets disponibles dans le magasin
 /// @param soldBouquets {vector<Flower>} bouquets vendues par magasin
-class FlowerShop
+class Flower_Shop
 {
 public:
-  FlowerShop();
+  Flower_Shop();
 
   void add_bouquet(const Bouquet &bouquet);
 
@@ -29,7 +29,7 @@ public:
 
   void __repr__();
 
-  ~FlowerShop(){};
+  ~Flower_Shop(){};
 
 private:
   /// @brief  bouquets_ {vector<Flower>} bouquets disponibles dans le magasin
