@@ -10,7 +10,10 @@
                 "kind": "test",
                 "isDefault": true
             },
-            "command": "\"g++ ./code/Flower.cpp ./code/Flower_Shop.cpp ./code/Bouquet.cpp ./code/main.cpp -o main && ./main",
+            // "command": "\"g++ ./code/Flower.cpp ./code/Flower_Shop.cpp ./code/Bouquet.cpp ./code/main.cpp -o main && ./main",
+            // "command": "\"g++ ./codePaternise/singleton/allInOne.cpp -o main && ./main",
+            "command": "g++",
+            "args": ["./codePaternise/compositeSingletonFabrique/main.cpp","-o","main","&&","./main"],
             "options": {
                 "shell": {
                     "executable": "C:\\Users\\antoine\\AppData\\Local\\Microsoft\\WindowsApps\\KaliLinux.54290C8133FEE_ey8k8hqnwqnmg\\kali.exe",
